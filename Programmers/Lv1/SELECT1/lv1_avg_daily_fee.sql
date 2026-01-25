@@ -1,0 +1,8 @@
+/*
+- Table: CAR_RENTAL_COMPANY_CAR
+- Goal: SUV 평균 요금 구하기 (소수점 첫째 자리 반올림)
+- 핵심 컬럼: CAR_TYPE(종류), DAILY_FEE(요금)
+*/
+SELECT ROUND(AVG(DAILY_FEE), 0) AS AVERAGE_FEE
+FROM CAR_RENTAL_COMPANY_CAR
+WHERE CAR_TYPE = "SUV";
