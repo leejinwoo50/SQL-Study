@@ -1,0 +1,9 @@
+/*
+- Table: ANIMAL_INS
+- Goal: 젊은(none 'aged') 동물의 id와 이름 조회, 결과는 ANIMAL_ID 순
+- 핵심 컬럼: ANIMAL_ID, NAME
+*/
+SELECT ANIMAL_ID, NAME
+FROM ANIMAL_INS
+WHERE INTAKE_CONDITION NOT IN('Aged')
+ORDER BY ANIMAL_ID ASC
