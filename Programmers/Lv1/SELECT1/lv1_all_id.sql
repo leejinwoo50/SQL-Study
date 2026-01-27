@@ -1,0 +1,8 @@
+/*
+- Table: ANIMAL_INS
+- Goal: 모든 동물의 id와 이름 조회, 결과는 ANIMAL_ID 순
+- 핵심 컬럼: ANIMAL_ID, NAME
+*/
+SELECT ANIMAL_ID, NAME
+FROM ANIMAL_INS
+ORDER BY ANIMAL_ID ASC
