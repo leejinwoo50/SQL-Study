@@ -6,3 +6,12 @@
 SELECT COUNT(*) AS USERS
 FROM USER_INFO
 WHERE (AGE BETWEEN 20 AND 29) AND YEAR(JOINED) =2021
+
+
+/*
+WHERE AGE IN(19<= * <=30)와 같은 표현은 불가능!
+    -> BETWEEN 연산자 사용, 
+    혹은 WHERE AGE >= 19 AND AGE <= 30;로 비교연산자 사용
+    * IN은 왜 안되나?
+        -> IN**은 "범위"가 아니라 "정확히 일치하는 여러 개의 값"을 찾을 때 쓰는 '바구니' 같은 역할
+*/

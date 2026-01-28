@@ -8,3 +8,9 @@ FROM ONLINE_SALE
 GROUP BY USER_ID, PRODUCT_ID
 HAVING COUNT(*) > 1
 ORDER BY USER_ID ASC, PRODUCT_ID DESC;
+
+/*
+HAVING : 묶인 그룹에 대한 조건 부여
+COUNT(매개) : 집계, (*)는 전체를 뜻함
+DESC : 내림차순
+*/
