@@ -1,0 +1,11 @@
+/*
+- Table: USED_GOODS_BOARD ,USED_GOODS_REPLY
+- Goal: 테이블에서 2022년 10월에 작성된 게시글 제목, 게시글 ID, 댓글 ID, 댓글 작성자 ID, 댓글 내용, 댓글 작성일을 조회
+        댓글 작성일을 기준으로 오름차순 정렬, 댓글 작성일이 같다면 게시글 제목을 기준으로 오름차순 정렬
+- 핵심 컬럼: CREATED_DATE
+*/
+SELECT A.TITLE, B.BOARD_ID,B.REPLY_ID, B.WRITER_ID, B.CONTENTS, DATE_FORMAT(B.CREATED_DATE,'%Y-%m-%d') CREATED_DATE
+FROM USED_GOODS_BOARD A 
+JOIN USED_GOODS_REPLY B ON A.BOARD_ID = B.BOARD_ID
+WHERE A.CREATED_DATE LIKE('2022-10%')
+ORDER BY B.CREATED_DATE , A.TITLE
